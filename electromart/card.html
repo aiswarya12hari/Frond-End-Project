@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background: #f5f5f5;
+        }
+        .cart-item img{
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .cart-item{
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .summary-box{
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- TOP NAVBAR -->
+    <div class="top-navbar">
+        <p>WELCOME TO OUR SHOP</p>
+        <div class="icons">
+            <a href="login.html"><img src="images/register.png" alt="" width="18px">Login</a>
+            <a href="register.html"><img src="images/register.png" alt="" width="18px">Register</a>
+
+        </div>
+    </div>
+    <!-- top navbar -->
+
+    <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" id="logo" style="color: white; text-shadow: 1px 1px 1px black; font-size: 30px;"></span>ElectroMart<span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><img src="./images/menu.png" alt="" width="30px"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Product</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            category
+          </a>
+          <ul class="dropdown-menu" style="background-color: rgb(98, 180, 173);">
+           
+            <li><a class="dropdown-item" href="mobilephone.html">Mobile phone</a></li>
+            <li><a class="dropdown-item" href="camera.html">Cameras</a></li>
+            <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
+            <!-- <li><a class="dropdown-item" href="ac.html">AC</a></li> -->
+            <li><a class="dropdown-item" href="smartwatch.html">Smart Watch</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Head Phone</a></li>
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+        
+
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        
+      </ul>
+      <form class="d-flex" id="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <a class="btn btn-primary ms-3" href="card.html" id="cartBtn">
+          <i class="fa fa-shopping-cart"></i> Cart <span id="cartCount" class="badge bg-light text-dark">3</span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container my-5">
+
+    <h2 class="mb-4 fw-bold">Your Cart</h2>
+
+    <div class="row">
+        <!-- CART ITEMS -->
+        <div class="col-lg-8">
+
+            <!-- Default Cart Item 1 -->
+            <div class="cart-item d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="images/a1.png" alt="Product">
+                    <div class="ms-3">
+                        <h5>Airpods</h5>
+                        <p class="text-muted mb-1">Color: blue</p>
+                        <span class="fw-bold">₹1,499</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="number" value="1" class="form-control mb-2" style="width: 80px;">
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+
+            <!-- Default Cart Item 2 -->
+            <div class="cart-item d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="images/w1.png" alt="Product">
+                    <div class="ms-3">
+                        <h5>Smart Watch</h5>
+                        <p class="text-muted mb-1">Color: white</p>
+                        <span class="fw-bold">₹999</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="number" value="1" class="form-control mb-2" style="width: 80px;">
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+
+            <!-- Default Cart Item 3 -->
+            <div class="cart-item d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="images/h1.png" alt="Product">
+                    <div class="ms-3">
+                        <h5>Headphone</h5>
+                        <p class="text-muted mb-1">Color: Black</p>
+                        <span class="fw-bold">₹799</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="number" value="1" class="form-control mb-2" style="width: 80px;">
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CART SUMMARY -->
+        <div class="col-lg-4">
+            <div class="summary-box">
+                <h4 class="fw-bold">Order Summary</h4>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <span>Subtotal</span>
+                    <span>₹3,297</span>
+                </div>
+
+                <div class="d-flex justify-content-between mt-2">
+                    <span>Shipping</span>
+                    <span>₹49</span>
+                </div>
+
+                <hr>
+
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Total</span>
+                    <span>₹3,346</span>
+                </div>
+
+                <button class="btn btn-primary w-100 mt-3">Proceed to Checkout</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+ <!-- Footer Section -->
+<footer class="footer-section mt-5 pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+
+            <!-- Shop Info -->
+            <div class="col-md-4">
+                <h4 class="footer-title">ElectroMart</h4>
+                <p>Palakkad</p>
+                <p>Kerala</p>
+                <p>India</p>
+                <p><strong>Phone:</strong> +919876543210</p>
+                <p><strong>Email:</strong> electromart@gmail.com</p>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="col-md-4 offset-md-4">
+                <h4 class="footer-title">Our Social Networks</h4>
+                <p>Stay connected with us on social media for the latest updates.</p>
+
+                <div class="social-links mt-3">
+                  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="25" alt=""></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="25" alt=""></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="25" alt=""></a>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <hr class="mt-4 mb-3">
+
+        <!-- Bottom Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <p class="copy-text">© Copyright <strong>ElectroMart.</strong> All Rights Reserved</p>
+            </div>
+
+           
+        </div>
+    </div>
+
+    
+    
+</footer>
+
+
+
+
+<!-- footer -->
+
+
+<a href="#" class="arrow"><i><img src="images/arrow.png" alt=""></i></a>
+
+
+
+
+</body>
+</html>
